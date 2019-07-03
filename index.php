@@ -7,25 +7,32 @@
         <meta name="description" content="Projeto 1">
         <meta name="author" content="Leonardo Elnisky">
 
+        <link rel="stylesheet" href="util.css"/>
+
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 		<script type="text/javascript" src="jquery.mask.js"></script>
     </head>
 
     <body>
-        <form method="get" action="home.php">
-            Nome: <input type="text" onkeypress="return validarNaoNumero(event)"/>
-            <br><br>
-            E-mail: <input type="email"/>
-            <br><br>
-            Telefone: <input type="text" class="tel-mask"/>
-            <br><br><br>
-            Assunto: <input type="text"/>
-            <br><br>
-            Mensagem: <input type="text"/>
+        <div class="flex-wrap" style="margin-top:100px">
+            <form method="GET" action="home.php">
+                Nome:<br>
+                <input type="text" name="nome" onkeypress="return validarNaoNumero(event)" required/> *<br><br>
+                E-mail:<br>
+                <input type="email" name="email" required/> *<br><br>
+                Telefone:<br>
+                <input type="text" name="tel" class="tel-mask" required/> *
+                <hr>
+                Assunto:<br>
+                <input type="text" name="assunto" required/> *
+                <br><br>
+                Mensagem:<br>
+                <textarea name="msg" rows="4" cols="25" required></textarea> *
 
-            <br><br>
-            <input type="submit"/>
-        </form>
+                <br><br>
+                <input type="submit" value="Enviar" class="customButtons"/>
+            </form>
+        </div>
 
         <script type="text/javascript">
             function validarNaoNumero(evt){

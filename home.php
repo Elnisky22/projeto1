@@ -15,8 +15,12 @@
             <div style="background-color:lightblue">
                 <h1><b>Formulário do Contato</b></h1>
                 <hr>
-                <p>Nome: <?php echo 'hola' ?></p>
-                <p>Email: <?php echo $_GET["email"]; ?></p>
+                <p><b>Nome:</b> <?php echo $_POST["nome"] ?></p>
+                <p><b>Email:</b> <?php echo $_POST["email"]; ?></p>
+                <p><b>Telefone:</b> <?php echo $_POST["tel"]; ?></p>
+                <br>
+                <p><b>Assunto:</b> <?php echo $_POST["assunto"]; ?></p>
+                <p><b>Mensagem:</b> <?php echo $_POST["msg"]; ?></p>
             </div>
         </div>
     </body>
